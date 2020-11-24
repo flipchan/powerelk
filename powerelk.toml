@@ -1,0 +1,6 @@
+[host]
+bind = "0.0.0.0"
+port = 1387  
+elasticsearchindex = "vulnfresh"
+elasticsearchinstance = "http://0.0.0.0:9200"
+cachelocation = "/tmp/mycache"

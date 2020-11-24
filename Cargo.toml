@@ -1,0 +1,23 @@
+[package]
+name = "powerelk"
+version = "0.1.0"
+authors = ["architect"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+sled = "0.34.3"
+reqwest = { version = "0.10", features = ["blocking", "json"] }
+openssl = { version = "0.10"  }
+tokio = { version = "0.2", features = ["full"] }
+json = "0.12.4"
+lazy_static = "*"
+bytes = "0.5.6"             
+hyper = "0.13.8"        
+serde_json = "1.0.57"        
+pretty_env_logger = "*"      
+serde = "*"                  
+serde_derive = "*"
+toml = "0.5.7"
+chrono = "0.4.19"
