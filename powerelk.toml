@@ -1,6 +1,6 @@
 [host]
 bind = "0.0.0.0"
 port = 1387  
-elasticsearchindex = "vulnfresh"
+elasticsearchindex = "elkindex"
 elasticsearchinstance = "http://0.0.0.0:9200"
 cachelocation = "/tmp/mycache"
