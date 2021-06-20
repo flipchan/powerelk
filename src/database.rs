@@ -6,6 +6,14 @@ pub struct Database {
     pub filelocation: String,
 }
 
+impl Default for Database {
+    fn default() -> Self {
+        Self {
+            filelocation: "/tmp/database.db".into(),
+        }
+    }
+}
+
 impl Database {
     /// find entry in database
     pub fn find(&mut self, findme: String) -> String {

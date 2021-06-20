@@ -47,3 +47,35 @@ $ curl -v http://0.0.0.0:1387/random -XGET
 ```
 
 
+
+## Default Mode  
+You can use Powerelk with Rust own [Default::default](https://doc.rust-lang.org/std/default/trait.Default.html)   
+
+cat src/elk.rs    
+```rust
+impl Default for Elk{
+
+        fn default() -> Self {
+                Self {
+                instance: "http://127.0.0.1:9200".into(),
+                index: "myindex".into(),}
+        }
+}
+```
+
+cat src/database.rs   
+
+```rust
+impl Default for Database {
+    fn default() -> Self {
+        Self {
+            filelocation: "/tmp/database.db".into(),
+        }
+    }
+}
+
+```
+
+cat src/
+
+

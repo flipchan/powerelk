@@ -118,6 +118,7 @@ async fn api_index() -> Result<Response<Body>> {
 }
 
 // parse the json http input
+#[allow(dead_code)]
 async fn api_post_response(req: Request<Body>) -> Result<Response<Body>> {
     let whole_body = hyper::body::aggregate(req).await?;
     let mut data: serde_json::Value = serde_json::from_reader(whole_body.reader())?;
@@ -211,6 +212,7 @@ async fn test_response() -> Result<Response<Body>> {
 }
 */
 
+#[allow(dead_code)]
 async fn api_get_response() -> Result<Response<Body>> {
     let data = vec!["foo", "bar"];
     let res = match serde_json::to_string(&data) {

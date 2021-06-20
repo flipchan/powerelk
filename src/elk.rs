@@ -7,6 +7,16 @@ pub struct Elk {
     pub index: String,
 }
 
+// Default https://doc.rust-lang.org/std/default/trait.Default.html
+impl Default for Elk {
+    fn default() -> Self {
+        Self {
+            instance: "http://127.0.0.1:9200".into(),
+            index: "myindex".into(),
+        }
+    }
+}
+
 impl Elk {
     pub fn getendpoint(self) -> String {
         let outme: String = format!("{}/{}", self.instance, self.index);
